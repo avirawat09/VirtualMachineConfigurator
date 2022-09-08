@@ -1,0 +1,42 @@
+.Instance-image-form{
+    /* width: 100px; */
+    height: inherit;
+
+
+    position: relative;
+    width: 120px;
+    /*height: 18px;
+    left: 1204px;
+    top: 336px; */
+
+    /* Button - semibold 14 (18, 0.2px) */
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    /* identical to box height, or 129% */
+
+    letter-spacing: 0.2px;
+    
+}
+
+.Form-button {
+
+left: 0px;
+right: 0px;
+top: 0px;
+bottom: 0px;
+height: 30px;
+position: relative;
+width: -webkit-fill-available;
+top: 20px;
+color: white;
+/* Primary / 100 */
+
+background: #007EFF;
+box-shadow: 0px 8px 16px rgba(0, 126, 255, 0.16);
+border-radius: 8px;
+}
+

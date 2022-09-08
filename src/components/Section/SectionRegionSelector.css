@@ -1,0 +1,18 @@
+.Section-region-selector{
+    background-color: bisque;
+    box-sizing: border-box;
+
+position: relative;
+left: 85%;
+top: 0px;
+bottom: 0px;
+width: 180px;
+height: 42px;
+/* White */
+
+background: #FFFFFF;
+/* Primary / 100 */
+
+border: 1px solid #007EFF;
+border-radius: 8px;
+}

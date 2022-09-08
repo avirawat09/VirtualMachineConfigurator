@@ -1,0 +1,11 @@
+.Section-body{
+    position: relative;
+    display: flex;
+    width:max-content;
+    left: 5%;
+    top: 7%;
+    padding: 5px;
+    height: 79%;
+    width: 85%;
+
+}

@@ -1,12 +1,12 @@
 import './Body.css';
-import SectionBody  from './Section/SectionBody';
+import Section  from './Section/Section';
 import PriceEstimatorCanvas from './PriceEstimator/PriceEstimatorCanvas';
 // import Sec
 function Body() {
 
     return (
         <div className='Body'>
-            <SectionBody></SectionBody>
+            <Section></Section>
             <PriceEstimatorCanvas></PriceEstimatorCanvas>
         </div>);
 

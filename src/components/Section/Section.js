@@ -1,7 +1,10 @@
-import './SectionBody.css';
+import './Section.css';
 import SectionTitle from './SectionTitle';
 import SectionList from './SectionList';
-function SectionBody(){
+import SectionBody from './SectionBody/SectionBody';
+import SectionRegionSelector from './SectionRegionSelector';
+
+function Section(){
     const section_list = [
         {
             id: 1,
@@ -25,14 +28,17 @@ function SectionBody(){
         }
     ]
 
-        return (
-    <div className='Section-body'>
-    <SectionTitle/>    
-    <SectionList list = {section_list}/>
-    </div>);
+    return (
+        <div className='Section'>
+            <SectionTitle/> 
+            <SectionRegionSelector/>   
+            <SectionList list = {section_list}/>
+            <SectionBody/>
+        </div>
+        );
 
 
 }
 
 
-export default SectionBody;
+export default Section;
