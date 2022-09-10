@@ -1,0 +1,13 @@
+.Type-selector {
+    position: relative;
+    left: 0%;
+    bottom: 0%;
+    height: inherit;
+    width: max-content;
+    top: 0px;
+    border-radius: 8px;
+    font-size: medium;
+    border: 1px solid #007EFF;
+    border-radius: 8px;
+}
+

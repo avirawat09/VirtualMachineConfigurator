@@ -1,7 +1,9 @@
-.Section-body-instance-image-card{
+.Instance-image-card{
     display: flex;
     position: relative;
-    width: 900px;
+    /* width: 900px; */
+    width: inherit;
+    
     height: 100px;
     left: 6px;
     top: 0px;

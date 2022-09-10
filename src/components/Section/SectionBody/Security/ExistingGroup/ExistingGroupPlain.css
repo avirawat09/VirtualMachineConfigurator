@@ -1,0 +1,40 @@
+.Existing-group-plain {
+    position: relative;
+    top:0px;
+    left: 0px;
+    width: inherit;
+    height: inherit;
+    padding:10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Existing-group-plain  span{
+    width: 290px;
+    height: 32px;
+    /* left: 66px;
+    
+     */
+    position: relative;
+    top:30px;
+    
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 32px;
+    /* identical to box height */
+    
+    }
+
+.Existing-group-selector {
+        position:relative;
+        top:30px;
+        width: 300px;
+        background: #FFFFFF;
+        border: 1px solid #007EFF;
+        border-radius: 8px;
+        padding: 10px;
+        margin-top: 10px;
+
+    }

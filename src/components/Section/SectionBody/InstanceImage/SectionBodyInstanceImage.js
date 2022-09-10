@@ -1,5 +1,5 @@
 import './SectionBodyInstanceImage.css'
-import SectionBodyInstanceImageCard from './SectionBodyInstanceImageCard';
+import SectionBodyInstanceImageCard from './InstanceImageCard';
 
 function SectionBodyInstanceImage(){
     const instance_image_body = [

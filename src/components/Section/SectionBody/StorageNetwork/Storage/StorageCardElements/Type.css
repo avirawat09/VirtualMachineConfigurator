@@ -1,0 +1,18 @@
+
+.Type-selector {
+    box-sizing: border-box;
+    position: relative;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    height: 32px;
+    left: 0px;
+    top: 0px;
+    border-radius: 8px;
+
+    background: #FFFFFF;
+    border: 1px solid #007EFF;
+    border-radius: 8px;
+}
+

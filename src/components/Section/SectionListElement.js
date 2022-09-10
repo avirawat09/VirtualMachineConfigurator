@@ -4,7 +4,7 @@ function SectionListElement(props){
     const element = props.detail;
     return (
         <button className='Section-list-element'>
-            {element.id}. {element.title}
+            {element.id}. {element.name}
         </button>
     );
 

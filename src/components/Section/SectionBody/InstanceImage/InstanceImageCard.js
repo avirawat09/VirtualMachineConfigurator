@@ -1,13 +1,13 @@
-import './SectionBodyInstanceImageCard.css';
+import './InstanceImageCard.css';
 
 import InstanceImagePicture from './InstanceImagePicture';
 import InstanceImageForm from './InstanceImageForm';
 import InstanceImageTitleDescription from './InstanceImageTitleDescription';
 
-function SectionBodyInstanceImageCard(props){
+function InstanceImageCard(props){
     const detail = props.detail
     return (
-        <div className='Section-body-instance-image-card'>
+        <div className='Instance-image-card'>
             <InstanceImagePicture/>
             <InstanceImageTitleDescription title = {detail.name} description = {detail.description}/>
             <InstanceImageForm price = {detail.price}/>
@@ -17,4 +17,4 @@ function SectionBodyInstanceImageCard(props){
 
 }
 
-export default SectionBodyInstanceImageCard;
+export default InstanceImageCard;

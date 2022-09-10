@@ -1,0 +1,9 @@
+.Storage-plain {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    padding:10px;
+    height: -webkit-fill-available;
+
+    /* background-color:tan; */
+}

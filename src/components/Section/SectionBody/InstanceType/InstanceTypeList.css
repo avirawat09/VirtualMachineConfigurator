@@ -1,11 +1,10 @@
-.Section-list{
+.Instance-type-list{
     position: relative;
     display: flex;
-    width:1100px;
+    width:max-content;
     /* background-color: aquamarine;  */
 
-    left: 5%;
-    top: 7%;
+    top: 2%;
     padding: 5px;
 
 }
