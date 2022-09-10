@@ -3,7 +3,7 @@ import SectionTitle from './SectionTitle';
 import SectionList from './SectionList';
 import SectionBody from './SectionBody/SectionBody';
 import SectionRegionSelector from './SectionRegionSelector';
-
+import DecisionButtonList from './DecisionButtons/DecisionButtonList';
 function Section(){
     const section_list = [
         {
@@ -34,6 +34,7 @@ function Section(){
             <SectionRegionSelector/>   
             <SectionList list = {section_list}/>
             <SectionBody/>
+            <DecisionButtonList/>
         </div>
         );
 

@@ -12,7 +12,7 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
-    font-size: 26px;
+    font-size: 23px;
     line-height: 32px;
     background: #FFFFFF;
     border-radius: 6px;
@@ -20,5 +20,13 @@
 
 
     border: 1px solid rgba(0, 0, 0, 0.29);
+
+}
+
+
+.Instance-type-list-element:focus {
+    color: rgba(0, 126, 255, 1);
+    border-color: rgba(0, 126, 255, 1);
+    ;
 
 }

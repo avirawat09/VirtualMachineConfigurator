@@ -20,14 +20,14 @@ function SectionRegionSelector(props){
         };
   
       return (
-        <div >
-            <label >
-                <select defaultValue={'Region'} className='Section-region-selector' value={value} onChange={handleChange}>
-                    {options.map((option) => (
-                        <option value={option.value}>{option.label}</option>))
-                    }
-                </select>
-            </label>
+        <div className='Section-region-selector'>
+            
+            <select defaultValue={'Region'} className='Selector-input' value={value} onChange={handleChange}>
+                {options.map((option) => (
+                    <option value={option.value}>{option.label}</option>))
+                }
+            </select>
+            
         </div>  
     );
 }

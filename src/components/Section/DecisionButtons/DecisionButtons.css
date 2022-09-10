@@ -1,0 +1,50 @@
+.Decision-buttons{
+    position: relative;
+height: inherit;
+width: 150px;
+float: right;
+/* Button - semibold 14 (18, 0.2px) */
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 18px;
+/* identical to box height, or 129% */
+
+/* display: flex; */
+/* align-items: center; */
+text-align: center;
+letter-spacing: 0.2px;
+
+/* White */
+margin-left: 10px;
+color: #FFFFFF;
+
+
+background: #2AC769;
+box-shadow: 0px 8px 16px rgba(42, 199, 105, 0.16);
+border-radius: 8px;
+
+
+}
+/* .Decision-buttons {
+    vertical-align: -webkit-baseline-middle;
+    line-height: normal;
+} */
+
+.Back {
+    background: rgba(0, 0, 0, 1);
+}
+
+.Cancel {
+    background: rgba(251, 78, 78, 1);
+}
+
+.Launch {
+    background: rgba(42, 199, 105, 1);
+}
+
+.Proceed {
+    background: rgba(0,126,255,1);
+}

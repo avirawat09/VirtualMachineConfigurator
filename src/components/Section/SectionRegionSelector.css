@@ -1,8 +1,15 @@
-.Section-region-selector{
+.Section-region-selector {
+    position: relative;
+    top: -30px;
+    float: right;
+}
+
+
+.Selector-input {
     box-sizing: border-box;
 
     position: relative;
-    left: 85%;
+    left: 0%;
     top: 0px;
     bottom: 0px;
     width: 180px;
@@ -14,4 +21,5 @@
 
     border: 1px solid #007EFF;
     border-radius: 8px;
+    
 }

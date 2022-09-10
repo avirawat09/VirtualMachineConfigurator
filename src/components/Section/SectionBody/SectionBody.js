@@ -21,7 +21,7 @@ function renderSwitch(param) {
     }
   }
 function SectionBody(){
-    const id = '5';
+    const id = '2';
    
     return (
     <div className='Section-body'>

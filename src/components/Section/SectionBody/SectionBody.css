@@ -1,11 +1,13 @@
 .Section-body{
+    overflow-y: scroll;
+    overflow-x:inherit;
     position: relative;
     display: flex;
     width:max-content;
     left: 5%;
-    top: 7%;
+    top: 2%;
     padding: 5px;
-    height: 79%;
-    width: 85%;
+    height: 75%;
+    width: 90%;
 
 }
