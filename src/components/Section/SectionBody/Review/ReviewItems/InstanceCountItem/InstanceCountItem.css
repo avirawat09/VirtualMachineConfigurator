@@ -1,0 +1,29 @@
+.Instance-count-item {
+    /* background-color: aquamarine; */
+    height: fit-content;   
+
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Instance-count-item .Span-title{
+    font-size:large;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 39px;
+    }
+    
+.Instance-count-item .Input-text{
+    box-sizing: border-box;
+    position: relative;
+    width: 345px;
+    height: 34px;
+    left: 0px;
+    top: 10px;
+
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    border-radius: 4px;
+
+}    

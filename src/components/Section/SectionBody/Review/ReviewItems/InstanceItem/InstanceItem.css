@@ -1,17 +1,18 @@
-.Image-item {
-    background-color: aquamarine;
+.Instance-item {
+    /* background-color: aquamarine; */
     height: fit-content;   
-    margin: 20px;
+    margin: 10px;
+    width: fit-content;
 }
 
-.Image-item .span-title{
+.Instance-item .span-title{
 font-size:large;
 font-weight: 600;
 font-size: 32px;
 line-height: 39px;
 }
 
-.Image-item .span-Edit{
+.Instance-item .span-Edit{
 font-size:large;
 font-weight: 600;
 font-size: 32px;
