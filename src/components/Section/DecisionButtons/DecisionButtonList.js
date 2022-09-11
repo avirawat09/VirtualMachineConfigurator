@@ -1,6 +1,8 @@
 import './DecisionButtonList.css';
-
 import DecisionButtons from './DecisionButtons'
+import { useContext } from 'react';
+import { AppContext } from '../../../context'
+
 
 function DecisionButtonList(){
     const button_list = {
@@ -12,9 +14,18 @@ function DecisionButtonList(){
             { id: 3, name : "Launch"},       
             { id: 2, name : "Back"},             
             { id: 1, name : "Cancel"},
-        ]}
-    const page_category = 'launch';
-    
+        ],
+        'blank': []
+    }
+
+    let page_category = 'blank';
+    const {secId  } = useContext(AppContext);
+    if ([2,3,4].includes(secId)){
+        page_category = 'process';
+    }
+    if (secId === 5){
+        page_category = 'launch';
+    }
     
     return (
         <div className='Decision-button-list'>

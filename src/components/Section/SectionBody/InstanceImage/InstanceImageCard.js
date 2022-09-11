@@ -10,7 +10,7 @@ function InstanceImageCard(props){
         <div className='Instance-image-card'>
             <InstanceImagePicture/>
             <InstanceImageTitleDescription title = {detail.name} description = {detail.description}/>
-            <InstanceImageForm price = {detail.price}/>
+            <InstanceImageForm detail = {detail} />
 
         </div>
     );

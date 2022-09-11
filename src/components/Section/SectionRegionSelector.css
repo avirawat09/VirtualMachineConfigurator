@@ -2,6 +2,11 @@
     position: relative;
     top: -30px;
     float: right;
+    /* color: #007EFF; */
+}
+
+.Section-region-selector span{
+    color: #007EFF;
 }
 
 
@@ -20,6 +25,8 @@
     /* Primary / 100 */
 
     border: 1px solid #007EFF;
+    color: 1px solid #007EFF;
+    
     border-radius: 8px;
     
 }

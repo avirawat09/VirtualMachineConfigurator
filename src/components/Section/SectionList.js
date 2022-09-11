@@ -1,10 +1,12 @@
 import './SectionList.css';
 import SectionListElement from './SectionListElement';
-function SectionList(props){
-    const section_list = props.list
+import {sectionList} from '../../data/data'
+
+function SectionList(){
+
     return (
         <div className='Section-list'>
-            { section_list.map((section) => <SectionListElement detail = {section}/>)}
+            { sectionList.map((section) => <SectionListElement detail = {section}/>)}
         </div>);
 }
 

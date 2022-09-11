@@ -5,30 +5,33 @@ import SectionBodyStorageNetwork from './StorageNetwork/SectionBodyStorageNetwor
 import SectionBodySecurity from './Security/SectionBodySecurity';
 import SectionBodyReview from './Review/SectionBodyReview';
 
+
+import { useContext } from 'react';
+import { AppContext } from '../../../context'
+
 function renderSwitch(param) {
     switch(param) {
-        case '1':
+        case 1:
             return <SectionBodyInstanceImage/>;
-        case '2':
+        case 2:
             return <SectionBodyInstanceType/>;
-        case '3':
+        case 3:
             return <SectionBodyStorageNetwork/>;
-        case '4':
-            return <SectionBodySecurity/>                  
-        default:
+        case 4:
+            return <SectionBodySecurity/>
+        case 5:
             return <SectionBodyReview/>;
-
+        default:
+            return <SectionBodyInstanceImage/>;
+        
     }
   }
-function SectionBody(){
-    const id = '2';
-   
+export default function SectionBody(){
+    const { secId } = useContext(AppContext);
+
     return (
     <div className='Section-body'>
-        {renderSwitch(id)}
-        
+        {renderSwitch(secId)}        
     </div>);
-
 }
 
-export default SectionBody;

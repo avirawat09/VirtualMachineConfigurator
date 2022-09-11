@@ -1,30 +1,27 @@
-// import { useState } from 'react';
 import './SectionRegionSelector.css'
-import { useState } from 'react';
+import {regionMap} from '../../data/data'
+import { useContext } from 'react';
+import { AppContext } from '../../context'
+
+
 function SectionRegionSelector(props){
-    const options = [
-        { label: 'us-east-1', value: 'us-east-1' },
-        { label: 'us-east-2', value: 'us-east-2' },
-        { label: 'us-west-1', value: 'us-west-1' },
-        { label: 'india-1', value: 'india-1' },
-      ];
+    const { handleChangeRegionId , regionId} = useContext(AppContext);
+
     
-    // return (
-    //     <div>
-    //         <Select className='Section-region-selector' defaultInputValue='Region' options = {options}/>
-    //     </div>
-    //   );
-      const [value, setValue] = useState('us-east-1');
-      const handleChange = (event) => {
-          setValue(event.target.value);
-        };
-  
-      return (
-        <div className='Section-region-selector'>
-            
-            <select defaultValue={'Region'} className='Selector-input' value={value} onChange={handleChange}>
-                {options.map((option) => (
-                    <option value={option.value}>{option.label}</option>))
+    const regionMapList = Object.entries(regionMap)
+    const handleOptionClick = (event) => {
+        handleChangeRegionId(event.target.value)
+    }
+
+    return (
+        <div className='Section-region-selector'>        
+            <select defaultChecked ={'Region'} defaultValue={'Region'} className='Selector-input'  value={regionId} onChange={handleOptionClick}>
+                {
+                  regionMapList.map((option) => (
+                  <option value = {option[0]} >
+                    <span> {option[1]} </span>
+                  </option> 
+                ))
                 }
             </select>
             

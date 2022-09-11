@@ -1,34 +1,53 @@
 import './ConfigurationTypeList.css';
-const ConfigurationTypeList = () => {
-    const cpu_options = [
-        { label: '1 Core', value: '1 Core' },
-        { label: '2 Core', value: '2 Core' },
-        { label: '4 Core', value: '4 Core' },
-        { label: '6 Core', value: '6 Core' },
-        { label: '8 Core', value: '8 Core' }
-    ]    
+import { useContext } from 'react';
+import { AppContext } from '../../../../context'
+import { instanceTypeDetailList }  from '../../../../data/data'
 
-    const memory_options = [
-        { label: '256 MB', value: '256 MB' },
-        { label: '512 MB', value: '512 MB' },
-        { label: '1 GB', value: '1 GB' },
-        { label: '4 GB', value: '4 GB' },
-        { label: '8 GB', value: '8 GB' }
-    ]    
-    const handleChange =()=>{};
-    let value ="SS";
+
+const ConfigurationTypeList = () => {
+    const { instanceTypeId ,cartInstanceType, handleCartInstanceType} = useContext(AppContext);
+    const instanceName = instanceTypeDetailList[instanceTypeId-1].name
+    
+    const cpuOptions = instanceTypeDetailList[instanceTypeId-1].cpuOptions
+    const memoryOptions = instanceTypeDetailList[instanceTypeId-1].memoryOptions
+
+    const handleCpuChange = (event ) => { 
+        const selectedCpuId =  event.target.value; 
+        const cpuObj = {
+            cpuId: selectedCpuId,
+            cpuName: cpuOptions[selectedCpuId-1].name,
+            id: instanceTypeId,
+            name: instanceName 
+            }   
+        handleCartInstanceType({...cartInstanceType, ...cpuObj })
+        };
+
+    const handleMemoryChange = (event ) => { 
+        const selectedMemoryId =  event.target.value; 
+        const memoryObj = {
+            memoryId: selectedMemoryId,
+            memoryName: memoryOptions[selectedMemoryId-1].name,
+            id: instanceTypeId,
+            name: instanceName 
+            }
+        handleCartInstanceType({...cartInstanceType, ...memoryObj })
+        
+    };
+    let valueCpu = 'cpuId' in cartInstanceType ? cartInstanceType.cpuName : "";
+    let valueMemory = 'memoryId' in cartInstanceType ? cartInstanceType.memoryName : "";
+
 
     return (
         <div className='configuration-type-list'>
 
-            <select defaultValue={'CPU Cores'} className='Drop-down' value={value} onChange={handleChange}>
-                     {cpu_options.map((option) => (
-                         <option value={option.value}>{option.label}</option>))
+            <select defaultChecked ={'CPU Cores'} defaultValue={'CPU Cores'} className='Drop-down' value={''} onChange={handleCpuChange}>
+                     {cpuOptions.map((option) => (
+                         <option value={option.id}>{option.name}</option>))
                      }
             </select>
-            <select defaultValue={'Memory'} className='Drop-down' value={value} onChange={handleChange}>
-                     {memory_options.map((option) => (
-                         <option value={option.value}>{option.label}</option>))
+            <select defaultChecked ={'Memory'} defaultValue={'Memory'} className='Drop-down' value={''} onChange={handleMemoryChange}>
+                     {memoryOptions.map((option) => (
+                         <option value={option.id}>{option.name}</option>))
                      }
             </select>
 
