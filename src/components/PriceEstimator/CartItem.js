@@ -1,12 +1,13 @@
 import './CartItem.css'
 
+
 function CartItem(props){
+
     const detail = props.detail;
     let cart_item = {
         name : detail[0],
         price : detail[1] 
     }
-
     return (
     <div>
         <span>{cart_item.name}</span>

@@ -7,7 +7,7 @@ import { AppContext } from '../../context'
 
 
 function CartItemList(){
-    const {cartImage , cartInstanceType, cartStorage, cartNetwork} = useContext(AppContext);
+    const {cartImage , cartInstanceType, cartStorage, cartNetwork, handleCartTotal}  = useContext(AppContext);
     const [cartObj, setCartObj] = useState({});
 
     useEffect(() => {
@@ -33,10 +33,15 @@ function CartItemList(){
         }    
         
     }, [cartInstanceType]);
-
-
+    const cartValues = Object.values(cartObj)
+    // let total = Object.values(cartObj).map((obj) =>  {obj[1]})
     // alert('CART:\n'+Object.entries(cartObj).map((o) => o+ '\n'))
-
+    // alert(Object.keys(cartObj))
+    let total = 0;
+    for (let i = 0; i < cartValues.length; i++) {
+        total += cartValues[i][1] ;
+      }
+    handleCartTotal(total)
 
     return (<div className='Cart-item-list'>
         {Object.values(cartObj).map((obj) => <CartItem detail = {obj}/>)}

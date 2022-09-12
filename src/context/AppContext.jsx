@@ -15,6 +15,7 @@ export const AppProvider = ({ children }) => {
     const [cartInstanceType, setCartInstanceType] = useState({});
     const [cartStorage, setCartStorage] = useState({});    
     const [cartNetwork, setCartNetwork] = useState({});    
+    const [cartTotal, setCartTotal] = useState(0);    
     
     
     //  Section
@@ -65,6 +66,10 @@ export const AppProvider = ({ children }) => {
     const handleRuleItem = (ruleObj) => {
         setRuleItem({...ruleItem, ...ruleObj})
     }
+    const handleCartTotal = (amount) => {
+        setCartTotal( amount);
+    }
+
 
     return (
         <AppContext.Provider 
@@ -87,7 +92,9 @@ export const AppProvider = ({ children }) => {
             ruleList,
             handleRuleList,
             ruleItem,
-            handleRuleItem
+            handleRuleItem,
+            cartTotal,
+            handleCartTotal
 
         }}>
             {children}
