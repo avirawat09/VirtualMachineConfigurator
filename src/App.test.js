@@ -1,8 +1,11 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
+import { AppProvider } from './context'
+
 
 test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
+  render(<AppProvider><App /></AppProvider>);
+  // screen.debug();
+  const linkElement = screen.getByText(/HVC/);
   expect(linkElement).toBeInTheDocument();
 });

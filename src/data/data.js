@@ -131,3 +131,14 @@ export const instanceTypeDetailList = [
     }
 ]
 
+export const storageTypeOption = [
+    {id: 1, name: "Magnetic Disks"},
+    {id: 2, name: "SSD"}
+]
+
+
+export const ruleTypeOptions = [
+    {id: 1, name: 'HTTPS'},
+    {id: 2, name: 'SSH'},
+    {id: 3, name: 'SMTP'}
+]

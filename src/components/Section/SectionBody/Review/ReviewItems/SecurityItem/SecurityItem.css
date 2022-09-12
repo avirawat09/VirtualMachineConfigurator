@@ -5,6 +5,9 @@
 }
 
 .span-title{
+    position: relative;
+    left: 10px;
+
 font-size:large;
 font-weight: 600;
 font-size: 32px;

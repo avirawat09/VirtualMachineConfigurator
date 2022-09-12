@@ -8,8 +8,6 @@ function RuleList(){
             <span className='Add-rule'>Add Rule</span>
             <div className='Rule-list'>
                 <RuleCard/>
-                <RuleCard/>
-                
             </div>
         </div>
     );

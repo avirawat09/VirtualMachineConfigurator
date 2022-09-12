@@ -6,7 +6,7 @@ function SectionList(){
 
     return (
         <div className='Section-list'>
-            { sectionList.map((section) => <SectionListElement detail = {section}/>)}
+            { sectionList.map((section) => <SectionListElement detail = {section} key = {section.id}/>)}
         </div>);
 }
 

@@ -7,20 +7,15 @@ import InstanceImageTitleDescription from '../../../InstanceImage/InstanceImageT
 import ImageItemForm from './ImageItemForm';
 
 
-const ImageItemCard = () =>{
-    const instance_image_body = {
-            id: 1,
-            name: 'Linux 2 image,Ubuntu Server 18.04 LTS',
-            description: 'Linux 2 comes with 5 years of support. It provides Linux kernel 4.14 tuned for optimal performance',
-            price: 243.61,
-            architecture: "64-bit (x86)"
-        }
+const ImageItemCard = (props) =>{
+    const imageDetail = props.detail;
+
 
     return(
         <div className='Image-item-card'>
             <InstanceImagePicture/>
-            <InstanceImageTitleDescription title = {instance_image_body.name} description = {instance_image_body.description}/>
-            <ImageItemForm architecture = {instance_image_body.architecture}/>
+            <InstanceImageTitleDescription title = {imageDetail.name} description = {imageDetail.description}/>
+            <ImageItemForm architecture = {imageDetail.architecture}/>
 
         </div>
     );

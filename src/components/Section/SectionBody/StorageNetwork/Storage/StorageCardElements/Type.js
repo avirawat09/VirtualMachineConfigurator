@@ -1,21 +1,30 @@
 import './Type.css';
 import '../StorageCard.css'
+import {storageTypeOption} from '../../../../../../data/data'
+
+import { useContext } from 'react';
+import { AppContext } from '../../../../../../context'
 
 const Type = () =>{
-    const type_options = [
-        { label: "SSD", value: "SSD"},
-        { label: "Magnetic Disks", value: "Magnetic Disks"}
-    ]
-    const handleChange =()=>{};
-    let value ="SS";
+    const { cartStorage, handleCartStorage } = useContext(AppContext);
+    const handleChange = (event)=>{
+        const updatedTypeId = event.target.value;
+        const updateObj = {
+            typeId : updatedTypeId,
+            typeName : storageTypeOption[updatedTypeId-1].name
+        };
+        handleCartStorage(updateObj)
+    };
+    
+    const value = 'typeId' in cartStorage? cartStorage.typeId : 1;
 
     return(
         <div className='Type Card-elements'>
             <span>
             <label className='Type-label'>Type</label>
-            <select defaultValue={'Storage'} className='Type-selector' value={value} onChange={handleChange}>
-                     {type_options.map((option) => (
-                         <option value={option.value}>{option.label}</option>))
+            <select defaultValue={value} className='Type-selector'  onChange={(event) => handleChange(event)}>
+                     {storageTypeOption.map((option) => (
+                         <option value={option.id}>{option.name}</option>))
                      }
             </select>
 

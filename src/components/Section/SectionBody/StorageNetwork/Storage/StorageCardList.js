@@ -6,7 +6,6 @@ const StorageCardList = () =>{
     return(
         <div className='Storage-card-list'>
             <StorageCard/>
-            <StorageCard/>
         </div>
     );
 

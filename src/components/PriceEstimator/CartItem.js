@@ -1,9 +1,10 @@
 import './CartItem.css'
 
-function CartItem(){
+function CartItem(props){
+    const detail = props.detail;
     let cart_item = {
-        name : 'item1',
-        price : 30 
+        name : detail[0],
+        price : detail[1] 
     }
 
     return (

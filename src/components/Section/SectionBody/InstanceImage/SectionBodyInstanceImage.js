@@ -11,7 +11,7 @@ function SectionBodyInstanceImage(){
     
     return  (
         <div>
-            {instanceImageList.map((instance_image)=> instance_image.id != windowId ? <SectionBodyInstanceImageCard detail = {instance_image}/> : null)}            
+            {instanceImageList.map((instance_image)=> instance_image.id != windowId ? <SectionBodyInstanceImageCard detail = {instance_image} key={instance_image.id}/> : null)}            
         </div>
     );
 

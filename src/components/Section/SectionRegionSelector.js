@@ -18,7 +18,7 @@ function SectionRegionSelector(props){
             <select defaultChecked ={'Region'} defaultValue={'Region'} className='Selector-input'  value={regionId} onChange={handleOptionClick}>
                 {
                   regionMapList.map((option) => (
-                  <option value = {option[0]} >
+                  <option value = {option[0]} key = {option[0]}>
                     <span> {option[1]} </span>
                   </option> 
                 ))

@@ -6,6 +6,9 @@ export const AppProvider = ({ children }) => {
     const [secId, setSecId] = useState(1);
     const [regionId, setRegionId] = useState(1);
     const [instanceTypeId, setInstanceTypeId] = useState(1);    
+    const [securityRadioBtnId, setSecurityRadioBtnId] = useState(1);    
+    const [ruleList, setRuleList] = useState([]);    
+    const [ruleItem, setRuleItem] = useState({});    
     
     // Cart
     const [cartImage, setCartImage] = useState({});
@@ -33,6 +36,11 @@ export const AppProvider = ({ children }) => {
         setInstanceTypeId(id)
     }
     
+   //  Security Radio btn Id
+    const handleSecurityRadioBtnId = (id) => {
+        setSecurityRadioBtnId(id)
+}
+
 
     //  cartImage
     const handleCartImage = (imageObject) => {
@@ -44,6 +52,19 @@ export const AppProvider = ({ children }) => {
         setCartInstanceType({...cartInstanceType, ...instanceTypeObj})
     }
 
+    // cartInstanceType
+    const handleCartStorage = (storageObj) => {
+        setCartStorage({...cartStorage, ...storageObj})
+    }
+
+    // rule List
+    const handleRuleList = (ruleObj) => {
+        setRuleList([...ruleList, ruleObj])
+    }
+
+    const handleRuleItem = (ruleObj) => {
+        setRuleItem({...ruleItem, ...ruleObj})
+    }
 
     return (
         <AppContext.Provider 
@@ -58,8 +79,15 @@ export const AppProvider = ({ children }) => {
             instanceTypeId,
             handleInstanceTypeId,
             cartInstanceType,
-            handleCartInstanceType
-
+            handleCartInstanceType,
+            cartStorage,
+            handleCartStorage,
+            securityRadioBtnId,
+            handleSecurityRadioBtnId,
+            ruleList,
+            handleRuleList,
+            ruleItem,
+            handleRuleItem
 
         }}>
             {children}

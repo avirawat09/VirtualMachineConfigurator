@@ -17,8 +17,8 @@ function DecisionButtons(props){
                      handleSecChangeCount(1) :
                      alert('No value Selected. Please select proper value again !')
             }
-            else if (secId == 3){
-
+            else {
+                handleSecChangeCount(1)
             }
         }
         else if (name === "Back") {
