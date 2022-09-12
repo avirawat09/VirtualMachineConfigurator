@@ -26,10 +26,13 @@ function DecisionButtons(props){
         }
         else if (name === "Launch") {
             // TODO: Add launch pop up here
-            alert('Launching')
+            alert('VM(s) Created with provided configurations successfully!')
+            handleSecChange(1);
         }
         else if (name === "Cancel") {
             // TODO: Add a cancel pop up here
+
+            alert('Transaction cancelled. Clearing up the Cart.')
             handleSecChange(1);
         }
 
