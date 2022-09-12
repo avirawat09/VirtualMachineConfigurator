@@ -4,7 +4,7 @@ import { useContext } from 'react';
 import { AppContext } from '../../../../../context'
 
 function AddNewGroupButton(){
-    const { ruleItem , handleRuleItem, handleSecChangeCount} = useContext(AppContext);
+    const { ruleItem , handleRuleItem, handleSecChangeCount, handleRuleList} = useContext(AppContext);
     const handleClick = (event) => {
         const objectKeys = Object.keys(ruleItem)
         const completeKeys = ['description', 'ruleSource' ]
@@ -13,6 +13,8 @@ function AddNewGroupButton(){
             alert('Fill complete details')
             return(<></>)
         } 
+        handleRuleList({...ruleItem})
+        handleRuleItem({})
         handleSecChangeCount(1)
     }
 
